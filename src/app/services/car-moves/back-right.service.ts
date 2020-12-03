@@ -28,8 +28,8 @@ export class BackRightService {
       this.carManipulationService.increaseRightPx(car, 10 - diff);
     } else if (angle > 0 && angle < 90) {
       let diff = Math.round((90 - angle) / 10);
-      this.carManipulationService.increaseBottomPx(car, 10 - diff);
-      this.carManipulationService.increaseRightPx(car, diff);
+      this.carManipulationService.increaseBottomPx(car, diff);
+      this.carManipulationService.increaseLeftPx(car, 10 - diff);
     } else if (angle > 90 && angle < 180) {
       const diff = (Math.abs(angle) - 90) / 10;
       this.carManipulationService.increaseTopPx(car, diff);
