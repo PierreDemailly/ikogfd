@@ -1,0 +1,21 @@
+.game-container {
+  background: url('../../../assets/grass-ground.jpg');
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.car {
+  background: url('../../../assets/vehicles/Audi.png');
+  height: 214px;
+  width: 96px;
+  background-position: center -25px;
+  margin: auto;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transform: rotate(0deg);
+}

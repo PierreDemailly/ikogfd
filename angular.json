@@ -33,7 +33,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref" : "/rljs-webapp/",
+            "deployUrl": "/rljs-webapp/"
           },
           "configurations": {
             "production": {
