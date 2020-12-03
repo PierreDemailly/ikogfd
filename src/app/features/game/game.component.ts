@@ -77,33 +77,6 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  moveCar(sense: Sense, keyup = false): void {
-    if (keyup && this.keyuping) {
-      keyup = false;
-      this.keyuping = false;
-    }    
-    console.log('ptn', sense, this.arrowKeysDown.ArrowUp);
-    if (this.arrowKeysDown.ArrowUp) { 
-      // this.carMovesService.moveCar(sense);
-      this.moveForwardCar(keyup);
-    }
-    return;
-    switch(sense) {
-      case Sense.Down:
-        this.moveBackCar();
-        break;
-      case Sense.Up:
-        this.moveForwardCar();
-        break;
-      default: break;
-    }
-    return;
-    /**
-     * Is a POC, TODO: ViewChildren
-     */
-    
-  }
-
   moveForwardCar(keyup = false): void {
     if (keyup) this.keyuping = true;
     console.log('move')

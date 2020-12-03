@@ -5,8 +5,7 @@ import { ForwardRightService } from './forward-right.service';
 import { ForwardLeftService } from './forward-left.service';
 import { ForwardService } from './forward.service';
 import { Injectable } from '@angular/core';
-import { ArrowKeysDown, Sense } from 'src/app/features/game/game.component';
-import { timingSafeEqual } from 'crypto';
+import { ArrowKeysDown } from 'src/app/features/game/game.component';
 
 @Injectable({
   providedIn: 'root'
@@ -23,13 +22,11 @@ export class CarMovesService {
   ) { }
 
   moveCar(car: HTMLElement, arrowKeysDown: ArrowKeysDown): void {
-    console.log(car);
-    console.log(arrowKeysDown);
-    console.log(getComputedStyle(car));
-    const topUp = arrowKeysDown.ArrowUp;
+    console.log(arrowKeysDown)
     if (arrowKeysDown.ArrowUp) {
       if (arrowKeysDown.ArrowLeft && !arrowKeysDown.ArrowRight) {
-        // move up left
+        console.log('ok');
+        this.moveForwardLeftService.moveForwardLeft(car);
       } else if (arrowKeysDown.ArrowRight && !arrowKeysDown.ArrowLeft) {
         // move up right
         this.moveForwardRightService.moveForwardRight(car);

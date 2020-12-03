@@ -35,7 +35,7 @@ export class ForwardService {
       const diff = (Math.abs(angle) - 90) / 10;
       this.carManipulationService.increaseBottomPx(car, diff);
       this.carManipulationService.increaseRightPx(car, 10-diff);
-    } else if (angle === 180) {
+    } else if (angle === 180 || angle === -180) {
       this.carManipulationService.increaseBottomPx(car, 10);
     }
   }
